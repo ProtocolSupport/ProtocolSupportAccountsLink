@@ -27,7 +27,7 @@ public class GameAccountCommands implements CommandExecutor {
 		if (uuidToCode.containsKey(uuid)) {
 			removeCode(uuid);
 		}
-		String randomCode = UUID.randomUUID().toString();
+		String randomCode = Utils.generateRandomString(10);
 		uuidToCode.put(uuid, randomCode);
 		codeToUUID.put(randomCode, uuid);
 		Bukkit.getScheduler().runTaskLater(plugin, () -> removeCode(uuid), TimeUnit.MINUTES.toSeconds(2) * 20);
