@@ -1,0 +1,11 @@
+name: ProtocolSupportAccountsLink
+main: support.protocol.accountslink.AccountsLink
+version: 1.0
+authors:
+- _Shevchik_
+depend:
+- ProtocolSupport
+commands:
+  accountslink:
+    aliases: al
+    usage: '/al'
